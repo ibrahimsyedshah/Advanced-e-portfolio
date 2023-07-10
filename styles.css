@@ -5,7 +5,14 @@
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
+}
+
+html {
     scroll-behavior: smooth;
+}
+
+form {
+    position: relative;
 }
 
 li {
@@ -35,8 +42,12 @@ input, textarea {
     border-top: none;
     border-left: none;
     border-right: none;
-    height: 40px;
+    margin-top: 8px;
 }
+
+/* input {
+    height: 80%;
+} */
 
 label {
     font-size: 14px;
@@ -45,8 +56,7 @@ label {
 
 textarea {
     resize: vertical;
-    height: 100px;
-    margin-top: 8px;
+    height: 90%;
 }
 
 input:hover, textarea:hover {
@@ -225,9 +235,11 @@ LANDING PAGE
     border: none;
     background-color: #242424;
     color: white;
-    position: absolute;
+    position: fixed;
     bottom: 32px;
     right: 40px;
+    z-index: 50;
+    box-shadow: 0 12px 30px 0 rgb(0, 0, 0, 0.28);
 }
 
 .scroll {
@@ -339,7 +351,7 @@ MODAL
 
 .modal__half {
     width: 50%;
-    padding: 40px 72px;
+    padding: 60px 72px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -398,6 +410,7 @@ MODAL
 
 .modal__para {
     margin-bottom: 12px;
+    font-size: 12px;
     line-height: 1.75;
 }
 
@@ -413,7 +426,11 @@ MODAL
 }
 
 .form__item {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
+}
+
+.form__item--label {
+    font-size: 12px;
 }
 
 .form__submit {
@@ -578,6 +595,8 @@ FOOTER
 footer {
     background-color: #242424;
     display: flex;
+    position: relative;
+    z-index: 55;
 }
 
 .footer__row {
@@ -607,4 +626,117 @@ footer {
 .footer__social--link,
 .footer__copyright {
     color: white;
+}
+
+/* 
+
+    SHAPES
+
+*/
+
+.shape {
+    position: fixed;
+}
+
+.shape--0 {
+    top: 15vh;
+    left: 5vw;
+}
+.shape--1 {
+    top: 15vh;
+    left: 50vw;
+}
+.shape--2 {
+    top: 15vh;
+    left: 80vw;
+}
+.shape--3 {
+    top: 50vh;
+    left: 5vw;
+}
+.shape--4 {
+    top: 50vh;
+    left: 50vw;
+}
+.shape--5 {
+    top: 50vh;
+    left: 80vw;
+}
+.shape--6 {
+    top: 80vh;
+    left: 5vw;
+}
+.shape--7 {
+    top: 80vh;
+    left: 50vw;
+}
+.shape--8 {
+    top: 80vh;
+    left: 80vw;
+}
+
+/* SMALL PHONES, TABLETS, LARGE SMART PHONES */
+@media (max-width: 768px) {
+    .title {
+        font-size: 70px;
+    }
+
+    .header__para {
+        font-size: 16px;
+    }
+
+    .modal {
+        top: 0;
+        left: 0;
+        transform: none;
+        height: auto;
+        width: 100%;
+        flex-direction: column-reverse;
+        border-radius: 0;
+    }
+
+    .modal__half {
+        width: 100%;
+        padding: 30px 40px;
+    }
+}
+
+/* SMALL PHONES  */
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 52px;
+    }
+
+    .header__para {
+        font-size: 18px;
+    }
+
+    .nav__link:first-child {
+        display: none;
+    }
+
+    .project__description--para {
+        display: none;
+    }
+
+    .project__description {
+        left: 0;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .project__description--title {
+        font-size: 32px;
+    }
+
+    .project__description--sub-title {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .modal__half {
+        padding: 40px;
+    }
 }
