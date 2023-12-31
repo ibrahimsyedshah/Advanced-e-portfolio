@@ -15,7 +15,6 @@ function moveBackground(event) {
 }
 
 function toggleContrast() {
-    console.log("aaaaaaaaaaã");
     contrastToggle = !contrastToggle;
     if(!contrastToggle) {
         document.body.classList.remove("dark-theme");
