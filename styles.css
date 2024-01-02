@@ -610,6 +610,7 @@ PROJECTS
     transition: opacity 300ms, transform 450ms ease;
     color: white;
     max-width: 550px;
+    padding-right: 8px;
 }
 
 .project__wrapper--bg {
@@ -754,6 +755,22 @@ footer {
     .modal__half {
         width: 100%;
         padding: 30px 40px;
+    }
+
+    .project__description {
+        left: 30px;
+    }
+
+    .project__description--title {
+        font-size: 24px;
+    }
+
+    .project__description--sub-title {
+        font-size: 16px;
+    }
+
+    .project__description--para {
+        font-size: 12px;
     }
 }
 
