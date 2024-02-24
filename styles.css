@@ -266,6 +266,12 @@ LANDING PAGE
     animation: scroll 1000ms infinite alternate-reverse;
 }
 
+.note {
+    font-size: 14px;
+    margin-top: 4px;
+    color: rgb(250, 31, 75);
+}
+
 @keyframes scroll {
     0% {
         transform: translateY(3px);
